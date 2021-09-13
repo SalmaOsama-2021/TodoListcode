@@ -1,0 +1,122 @@
+.heading{
+    background:linear-gradient(to right, rgb(2,228,171),rgb(74,215,240));
+    padding: 100px;
+    padding-bottom: 150px;
+}
+h1.title{
+    font-weight: bold;
+    text-shadow: 0px 1px 2px rgba(#000,0.12);
+    color: #fff;
+}
+.no-textshadow{
+    text-shadow: none !important;
+}
+.container{
+    max-width: 800px;
+    width: 800px;
+}
+.todo-box{
+
+    padding: 25px;
+    box-shadow: 0px 4px 12px rgba($color: #000000, $alpha: 0.08);
+    border-radius: 4px;
+    background-color: #fff;
+    margin-top: -68px;
+
+}
+.todo-item{
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    padding:35px 15px;
+    position: relative;
+    // background: #eee;
+    border-bottom: #f2f3f5 1px solid;
+  cursor: pointer;
+}
+.todo-item .Todo-text{
+    padding-left: 20px;
+ 
+}
+.todo-item .check-box{
+    border: 2px solid #eee;
+    border-radius: 50%;
+    height: 28px;
+    display: flex;
+    flex-shrink: 0;
+    width: 28px;
+    text-align: center;
+    transition:background-color 0.2s;
+
+    i{
+        font-size: 20px;
+        font-weight: 500;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+  
+}
+.todo-item:hover .check-box{
+    background:#eee;
+    i{
+        opacity: 0.28;
+    }
+}
+.todo-item.complete .check-box{
+    background-color: rgb(11,223,170);
+    border-color:rgb(11,223,170) ;
+    i{
+        opacity: 1;
+        color: #333;
+    }
+}
+.todo-item .todo-controle{
+    
+    position: absolute;
+    bottom:0;
+    right: 5px; 
+}
+.todo-item .todo-controle .todo-controle-box{
+    display: flex;
+justify-content: space-between;
+    // border-radius: 8px;
+    background: #f5f7f8;
+ padding: 7px 10px;
+ opacity: 0;
+ visibility: hidden;
+ transform: translateY(2px);
+ transition: opacity 0.4s, visibility 0.2, transform 0.2s;
+   
+        i{
+       font-size: 20px;
+       padding-right: 20px;
+    }
+    i:hover{
+        color:red;
+    }
+    &:hover{
+        background-color: #eee;
+    }
+    &:first-of-type{
+        border-top-left-radius: 8px;
+
+    }
+    &:last-of-type{
+        border-top-right-radius: 8px;
+     padding-left: 20px !important;
+    }
+}
+.todo-item:hover .todo-controle .todo-controle-box
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.4ms;
+    transform:translateY(0);
+}
+.add-todo-box-container{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}

@@ -1,0 +1,13 @@
+<div class="todo-item completed" (click)="onTodo()"  [class.completed]="todo.completed">
+    <div class="check-box"><i class="fas fa-check"></i></div>
+    <div class="Todo-text">
+        {{todo.text}}
+    </div>
+    <div class="todo-controle">
+        <div class="todo-controle-box" (click)="$event.stopPropagation()">
+            <i class="fas fa-pen" appToolTip  toolTip="Edit Value !"(click)="onEdit()"></i>
+            <i class="fas fa-trash" appToolTip toolTip="Delete Value !" (click)="onDelete()"></i>
+        </div>
+    </div>
+</div>
+
